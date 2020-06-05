@@ -6,7 +6,7 @@
  * @subpackage		DevMe
  * @author			RogerTM
  * @license			license.txt
- * @link			https://themingisprose.com/twenty-em
+ * @link			https://themingisprose.com/
  * @since 			DevMe 1.0
  */
 
@@ -18,6 +18,10 @@
 function devme_setup(){
 	// Make DevMe available for translation.
 	load_child_theme_textdomain( 'devme', get_stylesheet_directory() . '/languages' );
+
+	// Hooks
+	remove_action( 't_em_action_site_info_right', 't_em_display_user_social_network' );
+	add_action( 't_em_action_static_header_inner_after', 't_em_display_user_social_network' );
 }
 add_action( 'after_setup_theme', 'devme_setup' );
 
@@ -42,4 +46,11 @@ function devme_dequeue(){
 	wp_deregister_style( 'twenty-em-style' );
 }
 add_action( 'wp_enqueue_scripts', 'devme_dequeue', 999 );
+
+/**
+ * NULL
+ */
+function t_em_copy_right(){
+	return;
+}
 ?>

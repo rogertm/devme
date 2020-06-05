@@ -5,3 +5,87 @@
 //
 @import "custom";
 @import "../../../../twenty-em/assets/src/scss/theme";
+
+//
+// Scaffolding
+//
+body{
+	@extend .bg-primary;
+	a{
+		@extend .text-light;
+	}
+}
+#main{
+	@extend .my-0;
+}
+
+//
+// Navigation
+//
+#top-menu{
+	@extend .position-absolute;
+	top: -9999999999rem;
+	width: 0 !important;
+	height: 0 !important;
+	.navbar{
+		@extend .bg-primary;
+	}
+}
+
+//
+// Header
+//
+#static-header{
+	@extend .bg-primary;
+	@extend .text-light;
+	@extend .h-100;
+	border-radius: 0 !important;
+	.hero{
+		&-heading{
+			@extend .display-3;
+			@extend .font-weight-bold;
+			@extend .mb-4;
+		}
+		&-body{
+			p{
+				@extend .lead;
+				a{
+					border-bottom: dotted 1px;
+				}
+			}
+		}
+		&-footer{
+			@extend .mt-5;
+			.btn{
+				@extend .btn-lg;
+				@extend .btn-outline-light;
+				@extend .bg-transparent;
+				@extend .mt-4;
+				@extend .mr-4;
+				&:hover{
+					@extend .text-dark;
+					@extend .bg-light;
+				}
+			}
+		}
+	}
+	.social-network-menu{
+		@extend .mt-5;
+		li{
+			@extend .h3;
+			@extend .mt-5;
+			@extend .mr-3;
+		}
+	}
+}
+
+//
+// Footer
+//
+#footer{
+	@extend .position-absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	@extend .text-light;
+}
