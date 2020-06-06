@@ -11,11 +11,13 @@ $headings-font-family:		'PT Sans Narrow', sans-serif;
 $link-hover-decoration:		none;
 
 // Colors
-$primary:					#512DA8;
-$secondary:					#757575;
-$success:					#D1C4E9;
+$primary:					#455A64;
+$secondary:					#607D8B;
+$success:					#CFD8DC;
 $danger:					#FF5252;
-$info:						#673AB7;
+$info:						#BDBDBD;
 $warning:					#FF5722;
 $light:						#FFFFFF;
 $dark:						#212121;
+
+$code-color:				$danger;

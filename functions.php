@@ -48,6 +48,15 @@ function devme_dequeue(){
 add_action( 'wp_enqueue_scripts', 'devme_dequeue', 999 );
 
 /**
+ * Redirect to home
+ */
+function devme_redirect(){
+	if ( ! is_home() )
+		wp_redirect( get_home_url() );
+}
+add_action( 'template_redirect', 'devme_redirect' );
+
+/**
  * NULL
  */
 function t_em_copy_right(){
